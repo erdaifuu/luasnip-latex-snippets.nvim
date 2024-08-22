@@ -25,6 +25,14 @@ M.pipe = function(fns)
   end
 end
 
+M.is_math = function()
+  return vim.fn["vimtex#syntax#in_mathzone"]() == 1
+end
+
+M.not_math = function()
+  return not M.is_math()
+end
+
 M.no_backslash = function(line_to_cursor, matched_trigger)
   return not line_to_cursor:find("\\%a+$", -#line_to_cursor)
 end
