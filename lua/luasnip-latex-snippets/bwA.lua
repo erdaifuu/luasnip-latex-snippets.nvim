@@ -29,7 +29,7 @@ function M.retrieve(not_math)
     parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
     parse_snippet({ trig = "fitch", name = "fitch proof" }, "$\\begin{nd}\n\t$1\n\\end{nd}$"),
 
-    parse_snippet({ trig = "h1", name = "heading" }, "\\section{$1}$0"),
+    parse_snippet({ trig = "sse", name = "section" }, "\\section{$1}$0"),
     
     s({ trig = "bigfun", name = "Big function" }, {
       t({ "\\begin{align*}", "\t" }),
