@@ -28,6 +28,7 @@ function M.retrieve(not_math)
     parse_snippet({ trig = "beg", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
     parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
     parse_snippet({ trig = "fitch", name = "fitch proof" }, "$\\begin{nd}\n\t$1\n\\end{nd}$"),
+    parse_snippet({ trig = "enum", name = "enumerate" }, "\\begin{enumerate}[$1]\n\t$2\n\\end{enumerate}"),
 
     parse_snippet({ trig = "h1", name = "section" }, "\\section{$1}$0"),
     parse_snippet({ trig = "h2", name = "subsection" }, "\\subsection{$1}$0"),
