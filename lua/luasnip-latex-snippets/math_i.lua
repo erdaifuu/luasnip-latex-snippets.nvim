@@ -29,11 +29,11 @@ function M.retrieve(is_math)
 
     parse_snippet(
       { trig = "part", name = "d/dx" },
-      "\\frac{\\partial ${1:V}}{\\partial ${2:x}} $0"
+      "\\frac{\\partial ${1:V}}{\\partial ${2:x}}$0"
     ),
     parse_snippet(
       { trig = "ddx", name = "d/dx" },
-      "\\frac{\\mathrm{d${1:y}}}{\\mathrm{d${2:x}}} $0"
+      "\\frac{\\mathrm{d${1:y}}}{\\mathrm{d${2:x}}}$0"
     ),
 
     parse_snippet({ trig = "pmat", name = "pmat" }, "\\begin{pmatrix} $1 \\end{pmatrix} $0"),
