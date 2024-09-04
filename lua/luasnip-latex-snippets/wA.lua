@@ -19,7 +19,7 @@ function M.retrieve(not_math)
     parse_snippet({ trig = "ttt", name = "Typewriter" }, "\\texttt{$1}$0"),
     parse_snippet({ trig = "tii", name = "Italics" }, "\\textit{$1}$0"),
     parse_snippet({ trig = "tbt", name = "Bold" }, "\\textbf{$1}$0"),
-
+    parse_snippet({ trig = "tun", name = "Bold" }, "\\underline{$1}$0"),
   }
 end
 
