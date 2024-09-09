@@ -164,7 +164,7 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "lll", name = "l" }, "\\ell"),
     parse_snippet(
       { trig = "dint", name = "integral", priority = 300 },
-      "\\int_{${1:-\\infty}}^{${2:\\infty}} ${3:${TM_SELECTED_TEXT}} $0"
+      "\\int_{${1:-\\infty}}^{${2:\\infty}} ${3:${TM_SELECTED_TEXT}} \\mathrm{d$4} $0"
     ),
 
     parse_snippet({ trig = "==", name = "equals" }, [[&= $1 \\\\]]),
