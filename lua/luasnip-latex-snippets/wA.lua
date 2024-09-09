@@ -14,7 +14,7 @@ function M.retrieve(not_math)
     parse_snippet({ trig = "dm", name = "Block Math" }, "\\[\n\t${1:${TM_SELECTED_TEXT}}\n.\\] $0"),
     parse_snippet({ trig = "mm", name = "Tex Math" }, "$${1:${TM_SELECTED_TEXT}}$$0"),
 
-    parse_snippet({ trig = "gp", name = "Insert Graphic" }, "\\includegraphics[scale=foo]{$1.pdf}"),
+    parse_snippet({ trig = "gp", name = "Insert Graphic" }, "\\includegraphics[scale=$1]{$2.pdf}$0"),
 
     parse_snippet({ trig = "ttt", name = "Typewriter" }, "\\texttt{$1}$0"),
     parse_snippet({ trig = "tii", name = "Italics" }, "\\textit{$1}$0"),
