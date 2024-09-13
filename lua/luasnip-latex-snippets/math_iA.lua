@@ -100,7 +100,11 @@ function M.retrieve(is_math)
       f(function(_, snip)
         return string.format("\\bm{%s}", snip.captures[1])
       end, {})
-    )
+    ),
+
+    parse_snippet({ trig = ";", name = "subscript" }, "_{$1}$0"),
+    parse_snippet({ trig = ":", name = "superscript" }, "^{$1}$0"),
+    parse_snippet({ trig = "__", name = "Supersubscript" }, "_{$1}^{$2}$0"),
     
     parse_snippet({ trig = "prime", name = "Prime" }, "^{\\prime}"),
 
