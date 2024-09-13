@@ -89,6 +89,18 @@ function M.retrieve(is_math)
         return string.format("\\overleftarrow{%s}", snip.captures[1])
       end, {})
     ),
+    s(
+      {
+        trig = "(%a+)bm",
+        wordTrig = false,
+        regTrig = true,
+        name = "bold math",
+        priority = 100,
+      },
+      f(function(_, snip)
+        return string.format("\\bm{%s}", snip.captures[1])
+      end, {})
+    ),
 
     parse_snippet({ trig = "td", name = "to the ... power ^{}" }, "^{$1}$0 "),
     parse_snippet({ trig = "rd", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
