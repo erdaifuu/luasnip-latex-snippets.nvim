@@ -27,6 +27,7 @@ function M.retrieve(not_math)
 
     parse_snippet({ trig = "env", name = "begin{} / end{}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
     parse_snippet({ trig = "def", name = "begin{definition} / end{definition}" }, "\\begin{$1}\n\t$0\n\\end{$1}"),
+    parse_snippet({ trig = "fig", name = "Insert Graphic" }, "\\includegraphics[scale=$1]{$2.png}$0"),
     
     parse_snippet({ trig = "case", name = "cases" }, "\\begin{cases}\n\t$1\n\\end{cases}"),
     parse_snippet({ trig = "fitch", name = "fitch proof" }, "$\\begin{nd}\n\t$1\n\\end{nd}$"),
