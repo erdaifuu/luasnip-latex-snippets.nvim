@@ -100,12 +100,8 @@ function M.retrieve(is_math)
       f(function(_, snip)
         return string.format("\\bm{%s}", snip.captures[1])
       end, {})
-    ),
-
-    parse_snippet({ trig = "td", name = "to the ... power ^{}" }, "^{$1}$0 "),
-    parse_snippet({ trig = "rd", name = "to the ... power ^{()}" }, "^{($1)}$0 "),
-    parse_snippet({ trig = "cb", name = "Cube ^3" }, "^3 "),
-    parse_snippet({ trig = "sr", name = "Square ^2" }, "^2"),
+    )
+    
     parse_snippet({ trig = "prime", name = "Prime" }, "^{\\prime}"),
 
     parse_snippet({ trig = "EE", name = "exists" }, "\\exists "),
