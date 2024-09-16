@@ -42,35 +42,35 @@ function M.retrieve(is_math)
     ),
 
     s({ trig = "crossmat", name = "cross product" }, {
-      t({ "\\begin{vmatrix}", "\t" }),
-      t("\\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\", "\t"),
+      t({P"\\begin{vmatrix}", "\t"}),
+      t({"\\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\", "\t"}),
       i(1, "a_1"),
       t(" & "),
-      i(2, "a_2")
+      i(2, "a_2"),
       t(" & "),
       i(3, "a_3"),
-      t(" & ", "\t")
+      t({" & ", "\t"}),
       i(4, "b_2"),
       t(" & "),
-      i(5, "b_1")
+      i(5, "b_1"),
       t(" & "),
       i(6, "b_3"),
-      t(" & ", "\t")
-      t({ "\\end{vmatrix}" }),
+      t({" & ", "\t"}),
+      t("\\end{vmatrix}"),
       i(0),
     }),
 
   s({ trig = "detmat", name = "determinants" }, {
-      t({ "\\begin{vmatrix}", "\t" }),
+      t({"\\begin{vmatrix}", "\t"}),
       i(1, "a"),
       t(" & "),
-      i(2, "b")
-      t(" & ", "\t")
+      i(2, "b"),
+      t({" & ", "\t"}),
       i(3, "d"),
       t(" & "),
-      i(4, "c")
-      t(" & ", "\t")
-      t({ "\\end{vmatrix}" }),
+      i(4, "c"),
+      t({" & ", "\t"}),
+      t("\\end{vmatrix}"),
       i(0),
     }),
 
