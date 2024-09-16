@@ -102,8 +102,9 @@ function M.retrieve(is_math)
       end, {})
     ),
 
-    parse_snippet({ trig = ";", name = "subscript" }, "_{$1}$0"),
-    parse_snippet({ trig = ":", name = "superscript" }, "^{$1}$0"),
+    -- TODO: Fix the lua patterns on these
+    parse_snippet({ trig = ";", name = "(%a+)subscript" }, "_{$1}$0"),
+    parse_snippet({ trig = ":", name = "(%a+)superscript" }, "^{$1}$0"),
     parse_snippet({ trig = "__", name = "Supersubscript" }, "_{$1}^{$2}$0"),
     
     parse_snippet({ trig = "prime", name = "Prime" }, "^{\\prime}"),
