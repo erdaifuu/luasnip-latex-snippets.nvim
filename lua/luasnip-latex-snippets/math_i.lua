@@ -41,14 +41,38 @@ function M.retrieve(is_math)
       "\\begin{pmatrix} $1 \\end{pmatrix} $0"
     ),
 
-    parse_snippet(
-      { trig = "crossprod", name = "cross product" },
-      "\begin{vmatrix}",
-      "  \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\",
-      "  $1 & $2 & $3 \\\\",
-      "  $4 & $5 & $6 \\\\",
-      "\\end{vmatrix}$0"
-    ),
+    s({ trig = "crossmat", name = "cross product" }, {
+      t({ "\\begin{vmatrix}", "\t" }),
+      t("\\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\", "\t"),
+      i(1, "a_1"),
+      t(" & "),
+      i(2, "a_2")
+      t(" & "),
+      i(3, "a_3"),
+      t(" & ", "\t")
+      i(4, "b_2"),
+      t(" & "),
+      i(5, "b_1")
+      t(" & "),
+      i(6, "b_3"),
+      t(" & ", "\t")
+      t({ "\\end{vmatrix}" }),
+      i(0),
+    }),
+
+  s({ trig = "detmat", name = "determinants" }, {
+      t({ "\\begin{vmatrix}", "\t" }),
+      i(1, "a"),
+      t(" & "),
+      i(2, "b")
+      t(" & ", "\t")
+      i(3, "d"),
+      t(" & "),
+      i(4, "c")
+      t(" & ", "\t")
+      t({ "\\end{vmatrix}" }),
+      i(0),
+    }),
 
     -- parse_snippet(
     --   { trig = "lr", name = "left( right)" },
