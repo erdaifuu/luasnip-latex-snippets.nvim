@@ -66,7 +66,7 @@ function M.retrieve(is_math)
       t(" & "),
       i(6, "b_3"),
       t({" & ", "\t"}),
-      t("\\end{vmatrix}"),
+      t({"", "\\end{vmatrix}"}),
       i(0),
     }),
 
