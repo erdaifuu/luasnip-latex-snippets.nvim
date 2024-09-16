@@ -103,7 +103,7 @@ function M.retrieve(is_math)
     ),
 
     -- subscript
-    s({trig = "([%a%)%]%}]);", regTrig = true, wordTrig = false, snippetType="autosnippet"},
+    s({trig = "([%a%)%]%}]);", regTrig = true, wordTrig = false},
       fmta(
         "<>_{<>}",
         {
@@ -112,8 +112,9 @@ function M.retrieve(is_math)
         }
       ),
     ),
+    
     -- superscript
-    s({trig = "([%a%)%]%}]):", regTrig = true, wordTrig = false, snippetType="autosnippet"},
+    s({trig = "([%a%)%]%}]):", regTrig = true, wordTrig = false},
       fmta(
         "<>^{<>}",
         {
