@@ -1,6 +1,8 @@
 local M = {}
 
 local ls = require("luasnip")
+local t = ls.text_node
+local i = ls.insert_node
 local utils = require("luasnip-latex-snippets.util.utils")
 local pipe = utils.pipe
 
@@ -10,6 +12,14 @@ function M.retrieve(is_math)
     condition = pipe({ is_math }),
     show_condition = is_math,
   }) --[[@as function]]
+  
+  local s = ls.extend_decorator.apply(ls.snippet, {
+    wordTrig = false,
+    condition = pipe({ is_math }),
+    show_condition = is_math,
+  }) --[[@as function]]
+
+  
 
   return {
     parse_snippet({ trig = "sum", name = "sum" }, "\\sum_{n=${1:1}}^{${2:\\infty}} ${3:a_n z^n}"),
