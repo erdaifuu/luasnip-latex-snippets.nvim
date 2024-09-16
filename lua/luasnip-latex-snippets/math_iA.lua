@@ -22,6 +22,15 @@ local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 
+
+local get_visual = function(args, parent)
+  if (#parent.snippet.env.SELECT_RAW > 0) then
+    return sn(nil, i(1, parent.snippet.env.SELECT_RAW))
+  else  -- If SELECT_RAW is empty, return a blank insert node
+    return sn(nil, i(1))
+  end
+end
+
 function M.retrieve(is_math)
   local utils = require("luasnip-latex-snippets.util.utils")
   local pipe, no_backslash = utils.pipe, utils.no_backslash
