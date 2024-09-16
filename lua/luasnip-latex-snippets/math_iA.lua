@@ -102,6 +102,27 @@ function M.retrieve(is_math)
       end, {})
     ),
 
+    -- subscript
+    s({trig = "([%a%)%]%}]);", regTrig = true, wordTrig = false, snippetType="autosnippet"},
+      fmta(
+        "<>_{<>}",
+        {
+          f( function(_, snip) return snip.captures[1] end ),
+          d(1, get_visual),
+        }
+      ),
+    ),
+    -- superscript
+    s({trig = "([%a%)%]%}]):", regTrig = true, wordTrig = false, snippetType="autosnippet"},
+      fmta(
+        "<>^{<>}",
+        {
+          f( function(_, snip) return snip.captures[1] end ),
+          d(1, get_visual),
+        }
+      ),
+    ),
+
     -- TODO: Fix the lua patterns on these
     parse_snippet({ trig = "(%a+);", name = "subscript" }, "_{$1}$0"),
     parse_snippet({ trig = "(%a+):", name = "superscript" }, "^{$1}$0"),
