@@ -111,6 +111,7 @@ function M.retrieve(is_math)
           d(1, get_visual),
         }
       ),
+      { condition = condition }
     ),
     
     -- superscript
@@ -122,6 +123,7 @@ function M.retrieve(is_math)
           d(1, get_visual),
         }
       ),
+      { condition = condition }
     ),
 
     -- TODO: Fix the lua patterns on these
