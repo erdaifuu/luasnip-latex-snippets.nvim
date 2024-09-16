@@ -42,7 +42,7 @@ function M.retrieve(is_math)
     ),
 
     s({ trig = "crossmat", name = "cross product" }, {
-      t({P"\\begin{vmatrix}", "\t"}),
+      t({"\\begin{vmatrix}", "\t"}),
       t({"\\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\", "\t"}),
       i(1, "a_1"),
       t(" & "),
