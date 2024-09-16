@@ -2,6 +2,7 @@ local M = {}
 
 local ls = require("luasnip")
 local f = ls.function_node
+local d = ls.dynamic_node
 
 function M.retrieve(is_math)
   local utils = require("luasnip-latex-snippets.util.utils")
