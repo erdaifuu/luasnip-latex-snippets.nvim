@@ -228,12 +228,16 @@ function M.retrieve(is_math)
     parse_snippet({ trig = "HH", name = "H" }, "\\mathbb{H}"),
     parse_snippet({ trig = "lll", name = "l" }, "\\ell"),
     parse_snippet(
-      { trig = "sint", name = "integral", priority = 300 },
+      { trig = "sint", name = "single integral", priority = 300 },
       "\\int_{${1:-\\infty}}^{${2:\\infty}} ${3:${TM_SELECTED_TEXT}} \\mathrm{d$4} $0"
     ),
     parse_snippet(
-      { trig = "dint", name = "integral", priority = 300 },
+      { trig = "dint", name = "double integral", priority = 300 },
       "\\iint_{${1:-\\infty}}^{${2:\\infty}} ${3:${TM_SELECTED_TEXT}} \\mathrm{d$4} $0"
+    ),
+    parse_snippet(
+      { trig = "iint", name = "integrated integral", priority = 300 },
+      "\\int_{${1:-\\infty}}^{${2:\\infty}} \\int_{${3:-\\infty}}^{${4:\\infty}}  ${5:${TM_SELECTED_TEXT}} \\mathrm{d$6} \\mathrm{d$7) $0"
     ),
 
     parse_snippet({ trig = "==", name = "equals" }, [[&= $1 \\\\]]),
