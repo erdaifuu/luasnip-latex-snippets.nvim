@@ -237,7 +237,7 @@ function M.retrieve(is_math)
     ),
     parse_snippet(
       { trig = "iint", name = "integrated integral", priority = 300 },
-      "\\int_{${1:-\\infty}}^{${2:\\infty}} \\int_{${3:-\\infty}}^{${4:\\infty}}  ${5:${TM_SELECTED_TEXT}} \\mathrm{d$6} \\mathrm{d$7) $0"
+      "\\int_{${1:-\\infty}}^{${2:\\infty}} \\int_{${3:-\\infty}}^{${4:\\infty}}  ${5:${TM_SELECTED_TEXT}} \\mathrm{d$6} \\mathrm{d$7} $0"
     ),
 
     parse_snippet({ trig = "==", name = "equals" }, [[&= $1 \\\\]]),
