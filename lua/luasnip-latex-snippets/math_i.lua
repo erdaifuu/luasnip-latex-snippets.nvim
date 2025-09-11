@@ -102,14 +102,22 @@ function M.retrieve(is_math)
     { trig = "lr[", name = "left[ right]" },
     "\\left[ ${1:${TM_SELECTED_TEXT}} \\right$0"
     ),
+    
     parse_snippet(
     { trig = "lra", name = "leftangle rightangle" },
     "\\left< ${1:${TM_SELECTED_TEXT}} \\right>$0"
     ),
-
     parse_snippet(
     { trig = "lrb", name = "left\\{ right\\}" },
-    "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\}$0"
+    "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\}$0"
+    ),
+    parse_snippet(
+    { trig = "lrp", name = "left( right)" },
+    "\\left( ${1:${TM_SELECTED_TEXT}} \\right)$0"
+    ),
+    parse_snippet(
+    { trig = "lrsb", name = "left[ right]" },
+    "\\left[ ${1:${TM_SELECTED_TEXT}} \\right$0"
     ),
 
     parse_snippet(
